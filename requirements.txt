@@ -1,0 +1,11 @@
+pandas
+numpy 
+yfinance
+matplotlib
+seaborn
+scikit-learn
+joblib
+python-box
+fastapi 
+jinja2
+-e.
