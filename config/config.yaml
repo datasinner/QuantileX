@@ -6,3 +6,7 @@ data_ingestion:
   start_date: '2015-01-01'
   interval: '1d'
     
+data_validation:
+  root_dir: artifacts/data_validation
+  STATUS_FILE: artifacts/data_validation/status.txt
+  ALL_REQUIRED_FILES: ["train", "test", "validation"]

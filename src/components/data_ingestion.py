@@ -16,6 +16,8 @@ class DataIngestion:
             self.config.root_dir
             + "/"
             + self.config.assets_type
+            + "/"
+            + self.config.assets_type
             + "_"
             + self.config.start_date
             + "_"
