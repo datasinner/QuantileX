@@ -1,4 +1,5 @@
 pandas
+datasets
 numpy 
 yfinance
 matplotlib
