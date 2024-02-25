@@ -61,10 +61,12 @@ class ConfigurationManager:
         params = self.params.TrainingArguments
 
         create_directories([config.root_dir + "/" + config.assets_type])
+        create_directories([config.output_path])
 
         model_trainer_config = ModelTrainerConfig(
             root_dir=config.root_dir,
             data_path=config.data_path,
+            output_path=config.output_path,
             assets_type=config.assets_type,
             alpha=params.alpha,
         )

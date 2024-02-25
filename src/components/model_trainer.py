@@ -52,8 +52,15 @@ class ModelTrainer:
         close_prediction = loaded_model.predict(self.last_row)
         close_low = float(close_prediction[0]) - float(self.metrics["MAE"][-1])
         close_high = float(close_prediction[0]) + float(self.metrics["MAE"][-1])
-        return {
-            "Close_prediction": close_prediction,
+        final_output = {
+            "Close_prediction": close_prediction[0],
             "Close_low": close_low,
             "Close_high": close_high,
         }
+        df_output = pd.DataFrame([final_output])
+        df_output.to_json(
+            f"{self.config.output_path}/output_of_{self.config.assets_type}.json",
+            orient="records",
+            lines=True,
+            indent=4,
+        )

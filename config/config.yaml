@@ -19,4 +19,5 @@ data_transformation:
 model_trainer:
   root_dir: artifacts/model_trainer
   data_path: artifacts/data_transformation
+  output_path: artifacts/output
   assets_type: 'BTC-USD'

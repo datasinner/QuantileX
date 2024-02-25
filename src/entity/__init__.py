@@ -28,5 +28,6 @@ class DataTransformationConfig:
 class ModelTrainerConfig:
     root_dir: Path
     data_path: Path
+    output_path: Path
     assets_type: str
     alpha: float
