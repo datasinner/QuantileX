@@ -1,1 +1,2 @@
-key: value
+TrainingArguments:
+  alpha: 0.1

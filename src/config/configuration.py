@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from src.entity import DataIngestionConfig
 from src.entity import DataValidationConfig
 from src.entity import DataTransformationConfig
+from src.entity import ModelTrainerConfig
 
 
 class ConfigurationManager:
@@ -54,3 +55,17 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.TrainingArguments
+
+        create_directories([config.root_dir + "/" + config.assets_type])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            assets_type=config.assets_type,
+            alpha=params.alpha,
+        )
+        return model_trainer_config
