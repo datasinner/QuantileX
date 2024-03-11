@@ -10,5 +10,6 @@ python-box
 fastapi 
 jinja2
 ensure
+uvicorn
 ta
 -e.
