@@ -3,6 +3,7 @@
 
 
 ## Workflows
+![alt text](<Диаграмма без названия.drawio.png>)
 
 1. Download Data from Yahoo Finance:
         Retrieve financial data from Yahoo Finance using an API or web scraping.
