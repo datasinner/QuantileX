@@ -11,5 +11,6 @@ fastapi
 jinja2
 ensure
 uvicorn
+mlflow
 ta
 -e.

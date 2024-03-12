@@ -6,6 +6,9 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 from src.entity import ModelTrainerConfig
 import pandas as pd
+import mlflow
+
+mlflow.set_experiment("BTC-Price_prediction-lasso")
 
 
 class ModelTrainer:
@@ -40,6 +43,12 @@ class ModelTrainer:
             self.metrics["MSE"].append(mse)
             self.metrics["MAE"].append(mae)
             self.metrics["r2"].append(r2)
+
+        with mlflow.start_run():
+            mlflow.log_metric("MSE", self.metrics["MSE"][-1])
+            mlflow.log_metric("MAE", self.metrics["MAE"][-1])
+            mlflow.log_metric("r2", self.metrics["r2"][-1])
+            mlflow.sklearn.log_model(lasso_model, "model")
         dump(
             lasso_model,
             f"{self.config.root_dir}/{self.config.assets_type}/Lasso_for_close.joblib",

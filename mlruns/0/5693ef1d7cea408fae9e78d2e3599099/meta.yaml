@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5693ef1d7cea408fae9e78d2e3599099/artifacts
+end_time: 1710222355344
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5693ef1d7cea408fae9e78d2e3599099
+run_name: dapper-hen-116
+run_uuid: 5693ef1d7cea408fae9e78d2e3599099
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710222351883
+status: 4
+tags: []
+user_id: c5367983
